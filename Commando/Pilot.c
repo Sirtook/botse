@@ -181,7 +181,7 @@ static void* Pilot_run()
 
 	while (myPilot.state != S_DEATH)
 	{
-		msg = Lampe_mqReceive ();
+		msg = Pilot_mqReceive ();
 		if (mySm[myPilot.state][msg.event].destinationState != S_FORGET)
 		{
 			act = mySm[myPilot.state][msg.event].action;
